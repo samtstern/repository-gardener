@@ -97,6 +97,10 @@ for file in $files; do
     )
   fi
 
+  echo "==Diffing=="
+  git diff
+  echo "==Done=="
+
   # If the folder contains a package-lock.json file then run `npm install` to also update the lock file.
   if [ -f "${FILE_DIR}/package-lock.json" ]; then
     (
